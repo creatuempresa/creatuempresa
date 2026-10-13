@@ -15,6 +15,7 @@
 <script src="/image-slot.js"></script>
 <style>
   * { box-sizing: border-box; }
+  image-slot { filter: grayscale(1); }
   body { margin: 0; background: #F3D22E; color: #33302B; font-family: 'Nunito', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
   h1, h2, h3, h4, p { margin: 0; }
   a { color: #33302B; text-decoration: none; }
@@ -280,8 +281,44 @@ class Component extends DCLogic {
         img: img,
         dur: (5.4 + (k % 5) * 0.55).toFixed(2) + 's',
         delay: ((k % 7) * 0.42).toFixed(2) + 's'
-      }))
+      })),
+      creadores: this.conFoto([
+        { slot: 'creator-candelaria', name: 'Candelaria Sosa', role: 'Author', color: '#F07E3C', em: '', quote2: '',
+          quote: '"As a little girl I used to play at being a country schoolteacher to my animals and dolls, or at running a toy store with my brothers. We set up the stock, sold to the family and took payment in Monopoly money… It was so much fun. I always loved the book section. I believe in literature that serves people."' },
+        { slot: 'creator-agustin', name: 'Agustín Sosa', role: 'Accounting', color: '#35AEC1', em: '', quote2: '',
+          quote: '"Creo en la cultura administrativa y contable como motor del desarrollo económico y social. Porque antes de comprender el mundo financiero, primero hay que generar ingresos, cobrarlos y sostenerlos en el tiempo. Ese es el verdadero punto de partida. Es muy bueno enseñarles jugando desde la niñez."' },
+        { slot: 'creator-vicky', name: 'Victoria Guazzone di Passalacqua', role: 'Editing', color: '#F07E3C', em: '', quote2: '',
+          quote: '"Working on this book was a way of going back to the essentials. To those games where we always wanted to be the one selling, giving change and setting the price. I\'m convinced that the sooner we learn to understand money, the more and better tools we have to choose how to live, grow and develop."' },
+        { slot: 'creator-mariela', name: 'Mariela Rojkin', role: 'Illustration', color: '#E24C9A',
+          quote: '"Este proyecto fue el puente perfecto para conectar con mi hija y su prima, mientras aprendían a colaborar y emprender. ',
+          em: 'Create Your Company',
+          quote2: ' transforma conceptos administrativos, contables y financieros en herramientas simples y prácticas. Un gran aliado para impulsar su creatividad y su confianza para el día de mañana."' },
+        { slot: 'creator-audrey', name: 'Audrey Ashby', role: 'Design', color: '#93C548', em: '', quote2: '',
+          quote: '"Being part of this project gave me the chance to turn complex but necessary tools into something close and accessible, so that children\'s ideas don\'t stay in their imagination. It also meant recognizing, in the curiosity of kids who are already inventing things, the same drive that once led me to choose an independent path in my working life."' },
+        { slot: 'creator-agustin-catino', name: 'Agustín Catino', role: 'Animation', color: '#7A5AA5', em: '', quote2: '',
+          quote: '"I\'ve always been passionate about creating projects that help people grow. Taking part in this book is a way to bring entrepreneurship closer to kids, sparking their curiosity, creativity and confidence to dare to build their own ideas."' },
+      ])
     };
+  }
+
+  conFoto(lista) {
+    const crops = {
+      'creator-candelaria': { s: 1, x: 0, y: 0.526 },
+      'creator-agustin': { s: 1.1527, x: 1.179, y: 5.796 },
+      'creator-audrey': { s: 1, x: 0, y: 0 },
+      'creator-vicky': { s: 1.3383, x: 5.815, y: 42.039 },
+      'creator-mariela': { s: 2.0818, x: -28.61, y: 21.43 },
+      'creator-agustin-catino': { s: 1.0536, x: -15.573, y: -2.682 }
+    };
+    return lista.map(c => {
+      const k = crops[c.slot] || { s: 1, x: 0, y: 0 };
+      return Object.assign({
+        foto: '/creadores/' + c.slot + '.webp',
+        w: (100 * k.s).toFixed(3) + '%',
+        left: 'calc(50% + ' + k.x.toFixed(3) + '%)',
+        top: 'calc(50% + ' + k.y.toFixed(3) + '%)'
+      }, c);
+    });
   }
 }
 </script>

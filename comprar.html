@@ -41,7 +41,6 @@
     nav > div > div { display: none !important; }
   }
 </style>
-<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><rect width="200" height="200" fill="#F3D22E"/><text x="30" y="115" font-size="60" font-family="sans-serif" fill="#33302B">CTE</text></svg></template>
 </helmet>
 
 <div style="width:100%;background:#F3D22E;">
@@ -103,7 +102,7 @@
       </div>
       <div data-reveal="" style="background:#35AEC1;color:#FFFFFF;border-radius:28px;padding:clamp(22px,2.6vw,30px);display:flex;flex-direction:column;gap:8px;">
         <p style="font-family:'Poppins',sans-serif;font-weight:600;font-size:21px;">Ilustración original</p>
-        <p style="font-size:15px;font-weight:600;line-height:1.55;">Cada página ilustrada a mano por Mariela Rojkin. Un sinfín de inspiraciones de emprendimientos.</p>
+        <p style="font-size:15px;font-weight:600;line-height:1.55;">Cada página ilustrada a mano. Un sinfín de inspiraciones de emprendimientos.</p>
       </div>
       <div data-reveal="" style="background:#7A5AA5;color:#FFFFFF;border-radius:28px;padding:clamp(22px,2.6vw,30px);display:flex;flex-direction:column;gap:8px;">
         <p style="font-family:'Poppins',sans-serif;font-weight:600;font-size:21px;">Actividades</p>
@@ -175,7 +174,7 @@
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;linkStripe&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Enlaces&quot;},&quot;precioDigital&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:10,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Precios&quot;},&quot;precioAnual&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:75,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Precios&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;linkStripe&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Enlaces&quot;},&quot;precioDigital&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:20,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Precios&quot;},&quot;precioAnual&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:50,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Precios&quot;}}">
 class Component extends DCLogic {
   componentDidMount() {
     this.io = new IntersectionObserver(entries => {
@@ -243,15 +242,15 @@ class Component extends DCLogic {
       opciones: [
         {
           nombre: 'Digital', tag: 'Llega al instante', color: '#35AEC1',
-          precio: 'USD ' + (p.precioDigital ?? 10) + ' / mes',
-          detalle: 'Acceso mensual al libro digital y sus actividades. Más impuestos.',
+          precio: 'USD ' + (p.precioDigital ?? 20) + ' por 4 meses',
+          detalle: 'Acceso por 4 meses al libro digital y sus actividades. Más impuestos.',
           cta: 'Comprar ahora', nota: 'Pago seguro',
           href: 'mailto:libro@creatuempresa.ai?subject=Digital%20mensual'
         },
         {
           nombre: 'Anual', tag: 'El mejor precio', color: '#E24C9A',
-          precio: 'USD ' + (p.precioAnual ?? 75),
-          detalle: 'Un año completo de acceso al libro digital y sus actividades.',
+          precio: 'USD ' + (p.precioAnual ?? 50),
+          detalle: '12 meses de acceso al libro digital y sus actividades.',
           cta: 'Comprar ahora', nota: 'Pago seguro',
           href: 'mailto:libro@creatuempresa.ai?subject=Acceso%20anual'
         },
