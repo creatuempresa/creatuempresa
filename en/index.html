@@ -40,6 +40,12 @@
     footer div[style*="minmax(120px"] { grid-template-columns: repeat(2, 1fr) !important; gap: 22px 18px !important; }
     footer > div > div:last-child { justify-content: center !important; text-align: center !important; }
   }
+  @media (max-width:860px) {
+    #cierre { display:flex !important; flex-wrap:wrap !important; justify-content:center !important; align-items:flex-end !important; gap:0 !important; padding-bottom:0 !important; }
+    #cierre > div:not([data-drift]) { order:1 !important; width:100% !important; flex:none !important; margin-bottom:28px !important; }
+    #cierre > div[data-drift] { position:static !important; order:2 !important; width:50% !important; height:auto !important; transform:none !important; display:flex !important; justify-content:center !important; }
+    #cierre > div[data-drift] img { height:150px !important; width:auto !important; }
+  }
   @media (max-width:640px) {
     nav > div > div { display: none !important; }
   }
@@ -96,7 +102,7 @@
   <span style="position:absolute;left:80%;top:81%;width:13px;height:13px;background:var(--a4,#7A5AA5);border-radius:50%;animation:twinkle 3.7s ease-in-out infinite .9s;"></span>
   <span style="position:absolute;left:95%;top:76%;width:16px;height:16px;background:var(--a5,#93C548);border-radius:50%;animation:twinkle 4.9s ease-in-out infinite 1.9s;"></span>
   <div style="max-width:1240px;margin:0 auto;position:relative;text-align:center;">
-    <p data-reveal="" style="display:inline-block;background:#FFFFFF;color:var(--dark,#33302B);font-size:clamp(12px,1.1vw,14px);font-weight:800;padding:9px 20px;border-radius:999px;margin-bottom:clamp(16px,2.4vw,26px);">Read and play · For kids ages 10 to 14</p>
+    <p data-reveal="" style="display:inline-block;background:#FFFFFF;color:var(--dark,#33302B);font-size:clamp(12px,1.1vw,14px);font-weight:800;padding:9px 20px;border-radius:999px;margin-bottom:clamp(16px,2.4vw,26px);">Read and play · For kids ages +10</p>
     <h1 data-reveal="" style="font-family:'Poppins',sans-serif;font-weight:600;color:#FFFFFF;letter-spacing:-.02em;line-height:.94;font-size:clamp(44px,7.6vw,112px);text-shadow:0 5px 0 rgba(0,0,0,.07);">Play at creating your business</h1>
     <p data-reveal="" style="max-width: 48ch; margin: clamp(14px,1.8vw,20px) auto 0; font-size: clamp(16px,1.4vw,19px); font-weight: 600; line-height: 1.5; color: var(--ink2,#4A463F); text-wrap: pretty; position: relative">Learn to start your business, run it, keep its accounts and take care of your money. Ready for the adventure, <strong style="font-weight:800;">great entrepreneurs</strong>?</p>
     <div data-reveal="" style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:clamp(18px,2.2vw,26px);">
@@ -309,7 +315,7 @@
 </section>
 
 
-<section style="position:relative;background:var(--bg,#F3D22E);padding:clamp(56px,8vw,100px) 28px;overflow:hidden;">
+<section id="cierre" style="position:relative;background:var(--bg,#F3D22E);padding:clamp(56px,8vw,100px) 28px;overflow:hidden;">
   <div data-drift="x:70,y:-40,rot:6" style="position:absolute;left:-10px;bottom:0;height:clamp(130px,15vw,215px);pointer-events:none;z-index:0;"><img src="/personajes/amigas-veterinaria.png" alt="" style="height:100%;width:auto;object-fit:contain;--r:0deg;animation:floaty 9.8s ease-in-out infinite;"></div>
   <div data-drift="x:-70,y:-30,rot:-6" style="position:absolute;right:-10px;bottom:0;height:clamp(130px,15vw,215px);pointer-events:none;z-index:0;"><img src="/personajes/pasteleria.png" alt="" style="height:100%;width:auto;object-fit:contain;--r:0deg;animation:floaty 10.8s ease-in-out infinite .6s;"></div>
   <div style="max-width:780px;margin:0 auto;position:relative;z-index:1;text-align:center;display:flex;flex-direction:column;gap:18px;align-items:center;">
@@ -358,7 +364,7 @@
       <p style="font-size:12px;font-weight:400;line-height:1.6;color:#CFC9BC;text-wrap:pretty;">This book does not promote or encourage child labor. On the contrary, it recognizes and respects the right of all children and teenagers to a full childhood, to play, to education and to their overall development, in accordance with current law and the Convention on the Rights of the Child.</p>
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:8px clamp(18px,3vw,44px);justify-content:center;text-align:center;border-top:1px solid #837C71;padding-top:20px;font-size:13px;font-weight:400;color:#D8D2C8;">
-      <p>A financial education book for kids ages 10 to 14</p>
+      <p>A financial education book for kids ages +10</p>
       <p>© 2026 All rights reserved</p>
     </div>
   </div>
