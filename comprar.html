@@ -139,7 +139,7 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(22px,4vw,52px);align-items:end;">
       <div style="display:flex;flex-direction:column;gap:14px;">
         <h2 style="font-family:'Poppins',sans-serif;font-weight:400;line-height:1;font-size:clamp(26px,3vw,40px);">Que empiece el juego</h2>
-        <p style="font-size:16px;font-weight:400;line-height:1.6;color:#CFC9BC;max-width:38ch;">Escríbenos para la edición impresa y armamos una propuesta por cantidad.</p>
+        <p style="font-size:16px;font-weight:400;line-height:1.6;color:#CFC9BC;max-width:38ch;">Escríbenos si buscas la edición impresa por cantidad y armamos una propuesta a tu medida.</p>
         <a href="mailto:libro@creatuempresa.ai" style="color:#F3D22E;font-size:17px;font-weight:400;" style-hover="color:#FFFFFF;">libro@creatuempresa.ai</a>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:clamp(16px,2.4vw,32px);font-size:15px;font-weight:400;">
@@ -241,23 +241,16 @@ class Component extends DCLogic {
       })),
       opciones: [
         {
-          nombre: 'Digital', tag: 'Llega al instante', color: '#35AEC1',
-          precio: 'USD ' + (p.precioDigital ?? 20) + ' / mes',
-          detalle: 'Acceso mensual al libro digital y sus actividades. Más impuestos.',
-          cta: 'Comprar ahora', nota: 'Pago seguro',
-          href: 'mailto:libro@creatuempresa.ai?subject=Digital%20mensual'
-        },
-        {
-          nombre: 'Anual', tag: 'El mejor precio', color: '#E24C9A',
-          precio: 'USD ' + (p.precioAnual ?? 50),
-          detalle: '12 meses de acceso al libro digital y sus actividades.',
-          cta: 'Comprar ahora', nota: 'Pago seguro',
-          href: 'mailto:libro@creatuempresa.ai?subject=Acceso%20anual'
+          nombre: 'Libro impreso', tag: 'Edición en Amazon', color: '#35AEC1',
+          precio: 'En Amazon',
+          detalle: 'Compra tu libro en Amazon y ten una copia impresa de este aliado en tu camino para crear tu empresa. Consulta precios y envíos a todo el mundo.',
+          cta: 'Ir a Amazon', nota: 'Envíos a todo el mundo',
+          href: 'https://www.amazon.com/s?k=Crea+tu+Empresa'
         },
         {
           nombre: 'Packs impresos', tag: 'Colegios, fundaciones y librerías', color: '#7A5AA5',
           precio: 'Consultar',
-          detalle: 'Escríbenos para la edición impresa y armamos una propuesta por cantidad.',
+          detalle: 'Escríbenos si buscas la edición impresa por cantidad y armamos una propuesta a tu medida.',
           cta: 'Pedir una reunión', nota: 'Te respondemos el mismo día',
           href: 'mailto:libro@creatuempresa.ai?subject=Packs%20impresos'
         }

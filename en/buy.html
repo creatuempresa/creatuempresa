@@ -134,7 +134,7 @@
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(22px,4vw,52px);align-items:end;">
       <div style="display:flex;flex-direction:column;gap:14px;">
         <h2 style="font-family:'Poppins',sans-serif;font-weight:400;line-height:1;font-size:clamp(26px,3vw,40px);">Let the game begin</h2>
-        <p style="font-size:16px;font-weight:400;line-height:1.6;color:#CFC9BC;max-width:38ch;">Write to us for the printed edition and we'll put together a bulk offer.</p>
+        <p style="font-size:16px;font-weight:400;line-height:1.6;color:#CFC9BC;max-width:38ch;">Write to us if you need the printed edition in bulk and we'll build an offer that fits you.</p>
         <a href="mailto:libro@creatuempresa.ai" style="color:#F3D22E;font-size:17px;font-weight:400;" style-hover="color:#FFFFFF;">libro@creatuempresa.ai</a>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:clamp(16px,2.4vw,32px);font-size:15px;font-weight:400;">
@@ -236,23 +236,16 @@ class Component extends DCLogic {
       })),
       opciones: [
         {
-          nombre: 'Digital', tag: 'Instant delivery', color: '#35AEC1',
-          precio: 'USD ' + (p.precioDigital ?? 20) + ' / month',
-          detalle: 'Monthly access to the digital book and its activities. Plus taxes.',
-          cta: 'Buy now', nota: 'Secure payment',
-          href: 'mailto:libro@creatuempresa.ai?subject=Digital%204%20months'
-        },
-        {
-          nombre: 'Annual', tag: 'Best value', color: '#E24C9A',
-          precio: 'USD ' + (p.precioAnual ?? 50),
-          detalle: '12 months of access to the digital book and its activities.',
-          cta: 'Buy now', nota: 'Secure payment',
-          href: 'mailto:libro@creatuempresa.ai?subject=Annual%20access'
+          nombre: 'Printed book', tag: 'Edition on Amazon', color: '#35AEC1',
+          precio: 'On Amazon',
+          detalle: 'Buy your book on Amazon and keep a printed copy of this ally on your journey to create your company. Check prices and shipping worldwide.',
+          cta: 'Go to Amazon', nota: 'Worldwide shipping',
+          href: 'https://www.amazon.com/s?k=Crea+tu+Empresa'
         },
         {
           nombre: 'Printed packs', tag: 'Schools, foundations and bookstores', color: '#7A5AA5',
           precio: 'Contact us',
-          detalle: "Write to us for the printed edition and we'll put together a bulk offer.",
+          detalle: "Write to us if you need the printed edition in bulk and we'll build an offer that fits you.",
           cta: 'Request a meeting', nota: 'We reply the same day',
           href: 'mailto:libro@creatuempresa.ai?subject=Printed%20packs'
         }
